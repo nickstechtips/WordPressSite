@@ -4,8 +4,10 @@ include_once( ABSPATH . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess
 
 /* Template Name: Home Page */ 
 
-$wpdb;
+global $wpdb;
+$user = wp_get_current_user();
 $Data = new DataAccess();
+$testData = $Data::GetHomepage();
 ?>
 
 <?php get_header();?>
