@@ -1,7 +1,8 @@
 <?php
-require_once('../../../../wp-load.php');
-require_once('../../../../wp-load.php');
-include_once ('../../../../wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
+// require_once('../../../../wp-load.php');
+// require_once('../../../../wp-load.php');
+include_once ($_SERVER['DOCUMENT_ROOT'] . '/wp-load.php');
+include_once ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
 
 
 global $wpdb;
@@ -18,7 +19,7 @@ if(is_callable($method)){
 
 function Gethomepage(){
     global $wpdb;
-    $user = "Test";
+    $user->name = "Test";
     wp_send_json($user);
 }
 
