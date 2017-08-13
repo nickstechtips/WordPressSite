@@ -18,6 +18,7 @@ $testData = $Data::GetHomepage();
         <?php endwhile; ?>	
 
         Test
+      <?php $testData ?>
     </div>
 </div>
 
